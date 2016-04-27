@@ -1,16 +1,20 @@
-<% content_for :title, 'admin | Action Cable Chat' %>
+<% content_for :title, 'DJ | Action Cable Chat' %>
+    <div class ="row">
+      <div class="input-field col s12 m12 l6">
+        <div class="col s12 m12">
+          <textarea id="message_input" class="materialize-textarea light-blue hidden" placeholder="Say something."></textarea>
+          <hr />
+        </div>
+      </div>
+    </div>
+<div id='fixed-buttons'>
+   <a class="btn-floating btn-large waves-effect waves-dark light-blue lighten-2" id="input-field-toggle"><i class="material-icons">mode_edit</i></a>
+
+     <span class="btn-floating btn-large waves-effect waves-dark white"><%= link_to('EXIT', destroy_user_session_path, :method => :delete) %></span>
+</div>
 
     <div class="row">
       <div class="messages col s12 m12 l6">
         <div class="col s12 m12" id="messages">
-          <%= render @messages %>
+          <%= render @messages.order(id: :desc) %>
         </div>
-        <textarea id="message_input" class="materialize-textarea hidden" placeholder="Start Message" ></textarea>
-  </div>
-</div>
-
-<div id='fixed-buttons'>
-   <a class="btn-floating btn-large waves-effect waves-dark light-blue darken-2" id="input-field-toggle"><i class="material-icons">mode_edit</i></a>
-
-     <span class="btn-floating btn-large waves-effect waves-dark white"><%= link_to('EXIT', destroy_user_session_path, :method => :delete) %></span>
-</div>
