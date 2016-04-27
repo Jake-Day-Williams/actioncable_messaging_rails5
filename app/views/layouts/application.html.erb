@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AcApp</title>
+    <title><%= content_for?(:title) ? yield(:title) : 'ActionCable Chat' %></title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet" type="text/css"/>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -1,3 +1,39 @@
-// Place all the styles related to the rooms controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.main-box {
+  height: 800px;
+  width: 100%;
+  overflow: scroll;
+}
+
+.card-panel {
+  overflow-wrap: break-word;
+}
+
+
+.hidden {
+  display: none;
+}
+
+#input-field-toggle {
+
+}
+
+#message_input {
+  @extend .blue, .lighten-4;
+  @extend .white-text;
+  font-size: 2em;
+}
+
+#fixed-buttons {
+    position: fixed;
+    bottom: 1%;
+    right: 90%;
+  }
+
+.avatar-pic img {
+    height: 55px;
+    width: 55px;
+    vertical-align: middle;
+    margin-right: 14px;
+    margin-bottom: 14px;
+    border-radius: 50%
+}

@@ -1,3 +1,17 @@
-<div class="message">
-  <p><%= message.content %></p>
+
+<div class="card-panel white indigo-text">
+      <div class="avatar-pic">
+      <img src="https://twitter.com/"+message.user.twitter+"/profile_image?size=original" alt="">
+      <block class="flow-text">
+      <%= message.content %>
+      </block>
+<hr>
+<div class="grey-text darken-2 right-align">
+  <%= message.user.email %>  |
+  <%= message.created_at.strftime("%b %d %Y") %>
+   @ <%= message.created_at.strftime("%H:%M") %>  |
+  <%= time_ago_in_words(message.created_at) %> ago.
 </div>
+</div>
+</div>
+

@@ -31,7 +31,7 @@ Rails.application.configure do
   end
 
   config.action_cable.url = 'wss://devpoint-projects-ottjw.c9users.io:8080/cable'
-  config.action_cable.allowed_request_origins = [ 'http://devpoint-projects-ottjw.c9users.io:8080']
+  config.action_cable.allowed_request_origins = ['http://devpoint-projects-ottjw.c9users.io:8080']
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
