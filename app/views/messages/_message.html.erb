@@ -1,6 +1,11 @@
 
 <div class="card-panel white indigo-text">
-
+      <div class="avatar-pic">
+      <% if message.user.twitter == ""  %>
+        <%= image_tag("https://www.genymotion.com/wp-content/uploads/2015/12/genymotion-android-emulator-developers.png") %>
+      <% else %>
+        <%= image_tag("https://twitter.com/"+message.user.twitter.to_s+"/profile_image?size=original") %>
+      <% end %>
 
       <block class="flow-text">
       <%= message.content.html_safe %>
@@ -11,6 +16,7 @@
   <%= message.created_at.strftime("%b %d %Y") %>
    @ <%= message.created_at.strftime("%H:%M") %>  |
   <%= time_ago_in_words(message.created_at) %> ago.
+</div>
 </div>
 </div>
 
