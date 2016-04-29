@@ -18,3 +18,7 @@
         <div class="col s12 m12" id="messages">
           <%= render @messages.order(id: :desc) %>
         </div>
+
+<audio class="audios" id="notify" controls preload="none">
+   <source src="audios/sound.mp3" type="audio/mpeg">
+</audio>

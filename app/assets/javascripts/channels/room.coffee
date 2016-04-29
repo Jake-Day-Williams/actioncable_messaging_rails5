@@ -11,6 +11,7 @@ App.room = App.cable.subscriptions.create "RoomChannel",
     $messages = $('#messages')
     $messages.prepend data
     $messages.scrollTop()
+    $('#notify').trigger("play")
 
   speak: (message) ->
     @perform 'speak', message: message
